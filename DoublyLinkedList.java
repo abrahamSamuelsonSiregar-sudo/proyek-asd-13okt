@@ -152,9 +152,6 @@ public class DoublyLinkedList implements LinkedList{
         Node2P current = head;
         int count = 0; 
         while(current != null){
-            if(current.data != null){
-                return -1;
-            }
             if(current.data.equals(targetData)){
                 return count; 
             }
@@ -170,7 +167,7 @@ public class DoublyLinkedList implements LinkedList{
         while(current != null){
             System.out.print(current.data);
             if(current.prev != null){
-                System.out.print(" <-> ");
+                System.out.print(",");
             }
             current = current.prev;
         } System.out.println();
@@ -184,16 +181,19 @@ public class DoublyLinkedList implements LinkedList{
             if(current.data.equals(targetData)){
                 if(current == head){
                     deleteFirst();
+                    return true;
                 } 
                 else if(current == tail){
                     deleteLast();
+                    return true;
                 } 
                 else{
                     current.next.prev = current.prev;
                     current.prev.next = current.next;
                     size--;
+                    return true;
                 }
-                return true;
+                
             }
             current = current.next;
         }
