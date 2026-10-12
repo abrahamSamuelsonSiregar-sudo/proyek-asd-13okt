@@ -32,7 +32,7 @@ public class testDoublyLinkedList {
         // Jadi index ke-2 adalah 4.
         System.out.println(linkedList.get(12)); //Terjadi exception error
         //Hasil percobaan: nilai null, karena diberi kondisi if(isEmpty() || index > size || index < 0)
-        //agar kita bisa tahu hasil program hingga akhir. 
+        //agar kita bisa tahu hasil program hingga akhir. **Hasil tanpa ditambahkan seleksi kondisi juga terjadi exception error.**
         System.out.println(linkedList.indexOf(4));// menghasilkan 5
         //hasil percobaan: nilai 2, karena proses penambahan data menggunakan addFirst.
         //jadi urutan node adalah 6,5,4,3,2,1 dan urutan ke-4 itu nilai 2.
